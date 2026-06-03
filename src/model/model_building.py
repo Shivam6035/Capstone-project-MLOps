@@ -133,6 +133,8 @@
 # if __name__ == '__main__':
 #     main()
 
+import os
+
 import numpy as np
 import pandas as pd
 import pickle
@@ -143,8 +145,21 @@ import mlflow.sklearn
 import dagshub
 from src.logger import logging
 
+
 # Initialize DagsHub to ensure MLflow tracks to the remote repository during CI/CD
-dagshub.init(repo_owner='Shivam6035', repo_name='Capstone-project-MLOps', mlflow=True)
+# Set up DagsHub credentials for MLflow tracking
+dagshub_token = os.getenv("CAPSTONE_TEST")
+if not dagshub_token:
+    raise EnvironmentError("CAPSTONE_TEST environment variable is not set")
+
+os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
+os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
+
+dagshub_url = "https://dagshub.com"
+repo_owner = "shivam6035"
+repo_name = "Capstone-project-MLOps"
+# Set up MLflow tracking URI
+mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 
 def load_data(file_path: str) -> pd.DataFrame:
     """Load data from a CSV file."""
