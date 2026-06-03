@@ -176,3 +176,6 @@ zipp==3.19.2
 prometheus_client
 
 -e .
+
+#install mlflow and dagshub for local use
+#install awscli and dvc[s3] for remote use
