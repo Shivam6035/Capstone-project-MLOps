@@ -86,7 +86,7 @@ def main():
         # test_size = 0.2
         
         df = load_data(data_url='https://raw.githubusercontent.com/vikashishere/Datasets/refs/heads/main/data.csv')
-        # s3 = s3_connection.s3_operations("capstone773", "AKIAWBZFO6FMDURI2ZOD", "PlBx3rJ+jqTen9xJ9aY19zG8qWTVrVuEBcDdHfQn")
+        # s3 = s3_connection.s3_operations("---", "-- ", "-- ") --- IGNORE ---
         # df = s3.fetch_file_from_s3("data.csv")
 
         final_df = preprocess_data(df)
