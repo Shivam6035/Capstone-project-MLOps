@@ -220,3 +220,14 @@ credential.txt
 notebooks/
 local_s3/
 data/
+
+# Executive files and archives
+eksctl.exe
+eksctl.zip
+*.exe
+*.zip
+
+# Python Virtual Environment (just in case 'cap' is inside this folder)
+cap/
+venv/
+.venv/

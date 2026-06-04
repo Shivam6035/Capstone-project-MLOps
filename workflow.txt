@@ -148,6 +148,7 @@ Check EKS Cluster Configuration Ensure you can access your EKS cluster by runnin
 
     Also, verify cluster deletion:
     eksctl get cluster --region us-east-1
+    instance name - capatone773
 
 
  Verify the cluster status:-
