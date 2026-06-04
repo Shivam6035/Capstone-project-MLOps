@@ -28,10 +28,9 @@ def promote_model():
     staging_versions = client.get_latest_versions(model_name, stages=["Staging"])
 
     if not staging_versions:
-        print(f"No models found in 'Staging' for '{model_name}'.")
-        latest_version_staging = None
-    else:
-        latest_version_staging = staging_versions[0].version
+        print(f"No models found in 'Staging' for '{model_name}'.Skipping promotion.")
+        return
+    latest_version_staging = staging_versions[0].version
 
     # Archive the current production model
     prod_versions = client.get_latest_versions(model_name, stages=["Production"])
