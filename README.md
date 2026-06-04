@@ -212,6 +212,47 @@ Benefits:
 * Centralized tracking
 * Better collaboration
 
+# 📊 Experiment Tracking & Model Performance
+
+The project leverages **MLflow** integrated with **DagsHub** to track experiments, compare models, and manage model artifacts.
+
+## Model Comparison
+
+| Model | Accuracy | F1 Score |
+|---------|---------|---------|
+| XGBoost | **85.0%** | **85.98%** |
+| Random Forest | 82.0% | 82.0% |
+| Gradient Boosting | 80.0% | 80.0% |
+| Logistic Regression | 79.0% | 79.0% |
+| Multinomial Naive Bayes | 78.0% | 78.0% |
+
+### Best Performing Model
+
+🏆 **XGBoost**
+
+- Accuracy: **85.0%**
+- F1 Score: **85.98%**
+- Selected as the production model
+- Registered through the MLflow Model Registry
+
+## Experiment Tracking Workflow
+
+Each experiment run tracks:
+
+- Algorithm
+- Hyperparameters
+- Accuracy
+- F1 Score
+- Model Artifacts
+- Training Metadata
+
+This enables reproducibility and data-driven model selection.
+
+### MLflow Experiment Visualization
+
+![MLflow Comparison](assets/mlflow_comparison.png)
+
+The Parallel Coordinates Plot provides a visual comparison of model parameters and evaluation metrics across multiple runs, helping identify the best-performing configuration.
 ---
 
 # 📂 Project Structure
