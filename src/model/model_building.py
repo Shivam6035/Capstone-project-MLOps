@@ -161,6 +161,12 @@ repo_name = "Capstone-project-MLOps"
 # Set up MLflow tracking URI
 mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 
+
+# Below code block is for local use
+# -------------------------------------------------------------------------------------
+# mlflow.set_tracking_uri('https://dagshub.com/Shivam6035/Capstone-project-MLOps.mlflow')
+# dagshub.init(repo_owner='Shivam6035', repo_name='Capstone-project-MLOps', mlflow=True)
+
 def load_data(file_path: str) -> pd.DataFrame:
     """Load data from a CSV file."""
     try:
