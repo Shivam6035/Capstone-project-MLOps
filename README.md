@@ -249,8 +249,9 @@ Each experiment run tracks:
 This enables reproducibility and data-driven model selection.
 
 ### MLflow Experiment Visualization
+<img width="2540" height="1390" alt="image" src="https://github.com/user-attachments/assets/23ef2a55-a1ad-45a0-98fc-cb3da2708782" />
 
-![MLflow Comparison](assets/mlflow_comparison.png)
+
 
 The Parallel Coordinates Plot provides a visual comparison of model parameters and evaluation metrics across multiple runs, helping identify the best-performing configuration.
 ---
